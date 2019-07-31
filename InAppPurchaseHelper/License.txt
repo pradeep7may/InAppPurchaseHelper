@@ -1,0 +1,2 @@
+MIT Licence
+Copyright @2019 iOSbucket
