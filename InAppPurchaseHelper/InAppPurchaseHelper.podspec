@@ -18,6 +18,6 @@ Helper class for InAppPurchase!
  
   s.ios.deployment_target = '9.0'
   s.swift_versions = '4.0'
-  s.source_files = 'InAppPurchaseHelper/InAppPurchaseHelper/InAppPurchaseHelper.swift'
+  s.source_files = 'InAppPurchaseHelper/InAppPurchaseHelper/InAppPurchaseHelper.{swift}'
  
 end

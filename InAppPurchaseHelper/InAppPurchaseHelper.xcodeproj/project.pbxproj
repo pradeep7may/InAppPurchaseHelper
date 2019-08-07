@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2771E04322FAF89400EA7E76 /* InAppPurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */; };
+		2771E04622FAFFE600EA7E76 /* InAppPurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771E04522FAFFE600EA7E76 /* InAppPurchaseHelper.swift */; };
 		27F095BD22F1A76300356C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F095BC22F1A76300356C59 /* AppDelegate.swift */; };
 		27F095BF22F1A76300356C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F095BE22F1A76300356C59 /* ViewController.swift */; };
 		27F095C222F1A76300356C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F095C022F1A76300356C59 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseHelper.swift; sourceTree = "<group>"; };
+		2771E04522FAFFE600EA7E76 /* InAppPurchaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseHelper.swift; sourceTree = "<group>"; };
 		27F095B922F1A76300356C59 /* InAppPurchaseHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchaseHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F095BC22F1A76300356C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F095BE22F1A76300356C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2771E04422FAFFE600EA7E76 /* InApp */ = {
+			isa = PBXGroup;
+			children = (
+				2771E04522FAFFE600EA7E76 /* InAppPurchaseHelper.swift */,
+			);
+			path = InApp;
+			sourceTree = "<group>";
+		};
 		27F095B022F1A76300356C59 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +66,7 @@
 			children = (
 				27F095BC22F1A76300356C59 /* AppDelegate.swift */,
 				27F095BE22F1A76300356C59 /* ViewController.swift */,
-				2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */,
+				2771E04422FAFFE600EA7E76 /* InApp */,
 				27F095C022F1A76300356C59 /* Main.storyboard */,
 				27F095C322F1A76400356C59 /* Assets.xcassets */,
 				27F095C522F1A76400356C59 /* LaunchScreen.storyboard */,
@@ -138,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2771E04322FAF89400EA7E76 /* InAppPurchaseHelper.swift in Sources */,
 				27F095BF22F1A76300356C59 /* ViewController.swift in Sources */,
 				27F095BD22F1A76300356C59 /* AppDelegate.swift in Sources */,
+				2771E04622FAFFE600EA7E76 /* InAppPurchaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
