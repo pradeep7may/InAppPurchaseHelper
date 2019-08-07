@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2771E04322FAF89400EA7E76 /* InAppPurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */; };
 		27F095BD22F1A76300356C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F095BC22F1A76300356C59 /* AppDelegate.swift */; };
 		27F095BF22F1A76300356C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F095BE22F1A76300356C59 /* ViewController.swift */; };
 		27F095C222F1A76300356C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F095C022F1A76300356C59 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseHelper.swift; sourceTree = "<group>"; };
 		27F095B922F1A76300356C59 /* InAppPurchaseHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchaseHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F095BC22F1A76300356C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F095BE22F1A76300356C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				27F095BC22F1A76300356C59 /* AppDelegate.swift */,
 				27F095BE22F1A76300356C59 /* ViewController.swift */,
+				2771E04222FAF89400EA7E76 /* InAppPurchaseHelper.swift */,
 				27F095C022F1A76300356C59 /* Main.storyboard */,
 				27F095C322F1A76400356C59 /* Assets.xcassets */,
 				27F095C522F1A76400356C59 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2771E04322FAF89400EA7E76 /* InAppPurchaseHelper.swift in Sources */,
 				27F095BF22F1A76300356C59 /* ViewController.swift in Sources */,
 				27F095BD22F1A76300356C59 /* AppDelegate.swift in Sources */,
 			);
@@ -213,7 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InAppPurchaseHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +309,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InAppPurchaseHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
