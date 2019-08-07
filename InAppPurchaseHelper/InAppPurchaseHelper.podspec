@@ -16,7 +16,7 @@ Helper class for InAppPurchase!
   s.author           = { 'Pradeep Yadav' => 'pradeep005yadav@rediffmail.com' }
   s.source           = { :git => 'https://github.com/pradeep7may/InAppPurchaseHelper.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.swift_versions = '4.0'
   s.source_files = 'InAppPurchaseHelper/InAppPurchaseHelper/*.{swift}'
  
