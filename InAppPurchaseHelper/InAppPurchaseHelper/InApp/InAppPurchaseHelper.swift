@@ -9,11 +9,11 @@
 import Foundation
 import StoreKit
 
-struct Product {
-    var price: String?
-    var duration: String?
-    var durationPeriod: UInt?
-    var identifier: String?
+public struct Product {
+    public var price: String?
+    public var duration: String?
+    public var durationPeriod: UInt?
+    public var identifier: String?
     init(price: String?, duration: String?, durationPeriod: UInt?, identifier: String?) {
         self.price = price
         self.duration = duration
@@ -22,9 +22,9 @@ struct Product {
     }
 }
 
-struct Result {
-    var isSuccess: Bool?
-    var message: String?
+public struct Result {
+    public var isSuccess: Bool?
+    public var message: String?
     init(isSuccess: Bool?, message: String?) {
         self.isSuccess = isSuccess
         self.message = message
@@ -32,14 +32,14 @@ struct Result {
 }
 
 
-enum Environment {
+public enum Environment {
     case production
     case sandbox
 }
 
-class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+public class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
-    static let sharedInstance = InAppPurchaseHelper()
+    public static let sharedInstance = InAppPurchaseHelper()
     var productIdentifier: String?
     var restoredProducts: Array<Any>?
     var callbackProducts: ([Product]) -> Void? = {
@@ -50,10 +50,10 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
     }
     var isForPurchase = false
     var callBackResult: NSDictionary?
-    var environment: Environment = .sandbox
+    public var environment: Environment = .sandbox
     
     // Custom Methods
-    func requestForProduct(productID: String, callback: @escaping ((Result)->(Void))) {
+    open func requestForProduct(productID: String, callback: @escaping ((Result)->(Void))) {
         self.callback = callback
         isForPurchase = true
         productIdentifier = productID
@@ -72,7 +72,7 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
         }
     }
     
-    func requestForProductsPrices(productIDs: [String], callback: @escaping (([Product])->(Void))) {
+    open func requestForProductsPrices(productIDs: [String], callback: @escaping (([Product])->(Void))) {
         self.callbackProducts = callback
         isForPurchase = false
         let transactions = SKPaymentQueue.default().transactions
@@ -88,14 +88,14 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
         }
     }
     
-    func restoreCompletedTransactions(callback: @escaping ((Result)->(Void))) {
+    open func restoreCompletedTransactions(callback: @escaping ((Result)->(Void))) {
         self.callback = callback
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
     
     // SKProductRequest Delegate Methods
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+    public func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         let products = response.products
         if products.count > 0 {
             var isExists = false
@@ -149,7 +149,7 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
         
     }
     
-    func request(_ request: SKRequest, didFailWithError error: Error) {
+    private func request(_ request: SKRequest, didFailWithError error: Error) {
         print("Error!",error)
         let result = Result(isSuccess: false, message: error.localizedDescription)
         self.callback(result)
@@ -157,7 +157,7 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
     
     //SKTransaction Observer Delegate Methods
     
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             switch transaction.transactionState {
             case .purchased:
@@ -178,7 +178,7 @@ class InAppPurchaseHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransac
         }
     }
     
-    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+    private func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         self.restoredProducts = Array()
         for transaction in queue.transactions {
             let productId = transaction.payment.productIdentifier
